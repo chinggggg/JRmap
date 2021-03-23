@@ -21,6 +21,79 @@
           <img class="landmark-5" src="./72ppi/5.png" alt="宮城" />
           <img class="landmark-6" src="./72ppi/6.png" alt="岩手" />
         </div>
+        <div class="scenic scenic1">
+          <img
+            class="imgbox scenic-1 first"
+            src="./72ppi/11.png"
+            alt="青森景點"
+          />
+          <img
+            class="imgbox scenic-1 second"
+            src="./72ppi/1-1.png"
+            alt="青森介紹"
+          />
+        </div>
+        <div class="scenic scenic2">
+          <img
+            class="imgbox scenic-2 first"
+            src="./72ppi/22.png"
+            alt="秋田景點"
+          />
+          <img
+            class="imgbox scenic-2 second"
+            src="./72ppi/2-1.png"
+            alt="秋田介紹"
+          />
+        </div>
+        <div class="scenic scenic3">
+          <img
+            class="imgbox scenic-3 first"
+            src="./72ppi/33.png"
+            alt="山形景點"
+          />
+          <img
+            class="imgbox scenic-3 second"
+            src="./72ppi/3-1.png"
+            alt="山形介紹"
+          />
+        </div>
+        <div class="scenic scenic4">
+          <img
+            class="imgbox scenic-4 first"
+            src="./72ppi/44.png"
+            alt="福島景點"
+          />
+          <img
+            class="imgbox scenic-4 second"
+            src="./72ppi/4-1.png"
+            alt="福島介紹"
+          />
+        </div>
+        <div class="scenic scenic5">
+          <img
+            class="imgbox scenic-5 first"
+            src="./72ppi/55.png"
+            alt="宮城景點"
+          />
+          <img
+            class="imgbox scenic-5 second"
+            src="./72ppi/5-1.png"
+            alt="宮城介紹"
+          />
+        </div>
+        <div class="scenic scenic6">
+          <img
+            class="imgbox scenic-6 first"
+            src="./72ppi/66.png"
+            alt="岩手景點"
+          />
+          <img
+            class="imgbox scenic-6 second"
+            src="./72ppi/6-1.png"
+            alt="岩手介紹"
+          />
+        </div>
+
         <div class="logo">
           <img src="./72ppi/logo.png" alt="" />
         </div>
@@ -32,5 +105,33 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(".imgbox").on("click", function () {
+        // $(this).closest(".scenic").children(".second").toggleClass("active");
+        // $(this).closest(".scenic").children(".first").css("opacity", "0");
+        // $(this).toggleClass("first");
+      });
+
+      $(".scenic").on("mouseenter", function () {
+        console.log("mouseenter");
+        $(this).children(".second").addClass("active1");
+        // $(this).removeClass("first");
+      });
+
+      $(".scenic").on("mouseleave", function () {
+        $(this).children(".second").removeClass("active1");
+        // $(this).addClass("first");
+        // $(this).closest(".scenic").children(".first").css("opacity", "0");
+      });
+
+      // $(".landmark-1").on("mouseenter", function () {
+      //   console.log("mouseenter");
+      //   $(".scenic").addClass("big");
+      // });
+      // $(".landmark-1").on("mouseleave", function () {
+      //   console.log("mouseleave");
+      //   $(".scenic").removeClass("big");
+      // });
+    </script>
   </body>
 </html>

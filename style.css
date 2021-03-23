@@ -191,11 +191,129 @@ html {
 .landmark-4:hover,
 .landmark-6:hover,
 .landmark-5:hover {
-  filter: sepia(20%);
+  /* filter: sepia(20%); */
+}
+.imgbox {
+  position: absolute;
+  /* width: 160px; */
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  /* animation:  */
+}
+@keyframes scenic {
+  0% {
+    /* transform: scale(1); */
+    transform: translateY(0);
+  }
+  50% {
+    /* transform: scale(1.1); */
+    transform: translateY(3px);
+  }
+  100% {
+    /* transform: scale(1); */
+    transform: translateY(0);
+  }
+}
+@keyframes scenicStart {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-/* ///////////////////////////////////////////// */
-@media (max-width: 992px) {
+.scenic-1 {
+  top: -10%;
+  left: 45%;
+  animation: scenic 2.5s ease-out infinite 1s,
+    scenicStart 0.8s ease-out forwards 3.4s;
+}
+.scenic-2 {
+  top: 15%;
+  left: 25%;
+  animation: scenic 2s ease-out infinite 0.2s,
+    scenicStart 1s ease-out forwards 3.5s;
+}
+
+.scenic-3 {
+  top: 43%;
+  left: 6%;
+  animation: scenic 2.3s ease-out infinite 0.6s,
+    scenicStart 1s ease-out forwards 3.5s;
+}
+.scenic-4 {
+  top: 66%;
+  left: 27%;
+  animation: scenic 2.5s ease-out infinite 1s,
+    scenicStart 0.8s ease-out forwards 3.6s;
+}
+.scenic-5 {
+  top: 60%;
+  left: 65%;
+  animation: scenic 2s ease-out infinite 0s,
+    scenicStart 1.2s ease-out forwards 3.8s;
+}
+.scenic-6 {
+  top: 20%;
+  left: 72%;
+  animation: scenic 3s ease-out infinite 0.5s,
+    scenicStart 1.3s ease-out forwards 3.9s;
+}
+.imgbox {
+  cursor: pointer;
+  /* transition: 0.3s; */
+  opacity: 0;
+  width: 0;
+}
+.first {
+  width: 180px;
+  height: 180px;
+}
+.second {
+  display: none;
+  width: 100px;
+  height: 100px;
+  transition: 0.3s;
+
+  opacity: 1;
+}
+/* .first:hover .second {
+  width: 160px;
+  opacity: 1;
+} */
+.active1 {
+  display: block;
+  width: 180px;
+  height: 180px;
+  opacity: 1;
+}
+.big {
+  /* width: 180px;
+  height: 180px; */
+  /* object-position: center;
+  object-fit: 110%;
+  transform: translateY(0) scale(1.1); */
+  /* animation: big 0.3s ease-out infinite; */
+}
+/* @keyframes big {
+  0% {
+    filter: sepia(0%);
+  }
+  50% {
+    filter: sepia(30%);
+  }
+  100% {
+    filter: sepia(0%);
+  }
+} */
+
+/* ///////////mobile/mobile/mobile/mobile/mobile//////// */
+/* ///////////mobile/mobile/mobile/mobile/mobile//////// */
+/* ///////////mobile/mobile/mobile/mobile/mobile//////// */
+@media (max-width: 765.99px) {
   .map-bg {
     height: 600px;
     width: 100%;
@@ -208,13 +326,115 @@ html {
     background-size: cover;
   }
   .jp-title {
-    width: 200px;
+    width: 160px;
     height: 200px;
     left: 20px;
     top: -80px;
   }
+  @keyframes title {
+    0% {
+      left: 20px;
+      top: -80px;
+      opacity: 0;
+    }
+    100% {
+      left: 10px;
+      top: -80px;
+      opacity: 1;
+      width: 220px;
+      height: 200px;
+    }
+  }
+
+  .jp-map {
+    width: 100%;
+    height: 100%;
+    top: 10%;
+
+    animation: map 3s ease-in-out forwards;
+    animation-delay: 0.3s;
+    filter: blur(1px);
+  }
+  @keyframes map {
+    0% {
+      /* background-size: 100%; */
+      background-position: 80% 50%;
+      opacity: 0.7;
+    }
+    100% {
+      background-size: 500%;
+      background-position: 62% 45%;
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+  .landmark img {
+    width: 12%;
+  }
+  .landmark-1 {
+    top: 26%;
+    left: 57%;
+  }
+  .landmark-2 {
+    top: 37%;
+    left: 46%;
+  }
+  .landmark-3 {
+    top: 55%;
+    left: 36%;
+  }
+  .landmark-4 {
+    top: 70%;
+    left: 36%;
+  }
+  .landmark-5 {
+    top: 60%;
+    left: 48%;
+  }
+  .landmark-6 {
+    top: 38%;
+    left: 63%;
+  }
+
+  .scenic-1 {
+    top: -2%;
+    left: 45%;
+  }
+  .scenic-2 {
+    top: 15%;
+    left: 8%;
+  }
+
+  .scenic-3 {
+    top: 43%;
+    left: 0.5%;
+  }
+  .scenic-4 {
+    top: 76%;
+    left: 20%;
+  }
+  .scenic-5 {
+    top: 63%;
+    left: 53%;
+  }
+  .scenic-6 {
+    top: 38%;
+    left: 60%;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    object-fit: contain;
+    bottom: 15px;
+    left: 15px;
+  }
+  .first {
+    width: 150px;
+  }
 }
 
+/* ///////////////////////////////////////////// */
 @media (min-width: 1400px) {
   .map-bg {
     transform: scale(1.2);
