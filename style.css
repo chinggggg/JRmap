@@ -225,6 +225,10 @@ html {
   }
 }
 
+.scenic {
+  display: none;
+}
+
 .scenic-1 {
   top: -10%;
   left: 45%;
@@ -269,16 +273,32 @@ html {
   width: 0;
 }
 .first {
-  width: 180px;
-  height: 180px;
+  width: 0px;
+  height: 0px;
+  display: none;
+  animation: first 0.3s forwards 6s;
 }
+
+@keyframes first {
+  0% {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+  100% {
+    display: block;
+    width: 180px;
+    height: 180px;
+  }
+}
+
 .second {
   display: none;
-  width: 100px;
-  height: 100px;
+  width: 0px;
+  height: 0px;
   transition: 0.3s;
-
   opacity: 1;
+  animation: first 0.3s forwards 6s;
 }
 /* .first:hover .second {
   width: 160px;
@@ -431,6 +451,10 @@ html {
   }
   .first {
     width: 150px;
+  }
+  .active1 {
+    width: 150px;
+    height: 150px;
   }
 }
 
