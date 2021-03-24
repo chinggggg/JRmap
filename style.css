@@ -225,9 +225,10 @@ html {
   }
 }
 
-.scenic {
+/* .scenic {
   display: none;
-}
+  animation: first 0.3s forwards 6s;
+} */
 
 .scenic-1 {
   top: -10%;
@@ -272,24 +273,11 @@ html {
   opacity: 0;
   width: 0;
 }
-.first {
-  width: 0px;
-  height: 0px;
-  display: none;
-  animation: first 0.3s forwards 6s;
-}
 
-@keyframes first {
-  0% {
-    width: 0px;
-    height: 0px;
-    display: none;
-  }
-  100% {
-    display: block;
-    width: 180px;
-    height: 180px;
-  }
+.first {
+  width: 180px;
+  height: 180px;
+  /* display: block; */
 }
 
 .second {
@@ -298,7 +286,7 @@ html {
   height: 0px;
   transition: 0.3s;
   opacity: 1;
-  animation: first 0.3s forwards 6s;
+  /* animation: first 0.3s forwards 6s; */
 }
 /* .first:hover .second {
   width: 160px;
